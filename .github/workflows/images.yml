@@ -60,6 +60,8 @@ jobs:
   # --------------------------------------------------------------------------
   build-claude-runner:
     name: Build claude-runner
+    # Skip in forks: quay.io secrets only exist upstream.
+    if: github.repository == 'opendatahub-io/agentic-ci'
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.meta.outputs.image }}
@@ -136,6 +138,8 @@ jobs:
   # --------------------------------------------------------------------------
   build-opencode-runner:
     name: Build opencode-runner
+    # Skip in forks: quay.io secrets only exist upstream.
+    if: github.repository == 'opendatahub-io/agentic-ci'
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.meta.outputs.image }}
@@ -212,6 +216,8 @@ jobs:
   # --------------------------------------------------------------------------
   build-ci-podman:
     name: Build ci-podman
+    # Skip in forks: quay.io secrets only exist upstream.
+    if: github.repository == 'opendatahub-io/agentic-ci'
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.meta.outputs.image }}
@@ -282,6 +288,8 @@ jobs:
   # --------------------------------------------------------------------------
   build-claude-sandbox:
     name: Build claude-sandbox
+    # Skip in forks: quay.io secrets only exist upstream.
+    if: github.repository == 'opendatahub-io/agentic-ci'
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.meta.outputs.image }}
@@ -355,6 +363,8 @@ jobs:
   # --------------------------------------------------------------------------
   build-opencode-sandbox:
     name: Build opencode-sandbox
+    # Skip in forks: quay.io secrets only exist upstream.
+    if: github.repository == 'opendatahub-io/agentic-ci'
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.meta.outputs.image }}
@@ -428,6 +438,8 @@ jobs:
   # --------------------------------------------------------------------------
   build-ci-openshell:
     name: Build ci-openshell
+    # Skip in forks: quay.io secrets only exist upstream.
+    if: github.repository == 'opendatahub-io/agentic-ci'
     runs-on: ubuntu-latest
     outputs:
       image: ${{ steps.meta.outputs.image }}
